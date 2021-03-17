@@ -90,7 +90,9 @@ Para ello, lo primero que vamos a construir es una neurona artificial (desde cer
       **y_prediccion = activacion(z) = z**
    - Finalmente, haz una función llamada neurona, que una el paso 1 y el 2.
      **y_prediccion = neurona(activación(calcularZ(pesos,x,bias)))**
-     
+
+**Nota importante:** Todos los integrantes del equipo deben tener una neurona artificial creada antes de continuar. 
+    
 Puedes ver la solución al reto en [este cuaderno.](Reto01/Reto01.ipynb) 
 
 Como nota importante, durante esta sesión crearemos una red neuronal desde cero. Sin embargo, al final de la sesión haremos el entrenamiento con SciKit Learn. **Es sumamente importante aprender a construir una red neuronal para entender cómo mejorarla.**
@@ -142,7 +144,10 @@ Para ver cómo se puede programar esto, por favor [revisa este ejemplo.](Ejemplo
 > Para poder utilizar adecuadamente una red neuronal, primero tenemos que crear una función que la inicialice con valores aleatorios. La función debe de:
  - Recibir de entrada el tamaño del vector X y el número de neuronas que quieres implementar.  
  - Retornar de salida una matriz de pesos W, **con números aleatorios** y un array de bias B, igual **con números aleatorios.**
+
+**Nota importante:** Todos los integrantes del equipo deben tener este paso completado antes de continuar. 
  
+
 Puedes ver el resultado del [Reto 02 aquí.](Reto02/Reto02.ipynb)
 
 Con lo que hemos programado en los dos retos (el Reto 01 y Reto 02), ahora mismo hemos creado una sola capa de neuronas. Todas las neuronas de esa capa buscan una misma solución. Sin embargo, todas las neuronas de esa capa son independientes y no se comunican entre sí. 

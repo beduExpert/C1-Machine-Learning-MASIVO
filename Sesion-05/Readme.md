@@ -40,7 +40,7 @@ Pero para no complicarnos demasiado en todo esto, vamos a jugar con algo sencill
 Podemos crear un simple programa en Python del Adivina Quién en [el siguiente ejemplo.](Ejemplo01/Ejemplo01.ipynb)
 
 ## Reto 01
->Tomando como base el código del ejemplo 01, usa el código [que está aquí](Reto01/Reto01.ipynb) y edítalo de tal manera que hagas tus propias preguntas. Prueba con diferentes combinaciones de preguntas, diferentes nombres y características y juega un poco con el código para "adivinar" quién es el sospechoso. 
+>Tomando como base el código del ejemplo 01, usa el código [que está aquí](Reto01/Reto01.ipynb) y edítalo de tal manera que hagas tus propias preguntas. Prueba con diferentes combinaciones de preguntas, diferentes nombres y características y juega un poco con el código para "adivinar" quién es el sospechoso. Una vez que hayas experimentado un poco con esto por tu cuenta, entre los compañeros de equipo editen la matriz X, agregando personajes con sus características, y vean como funciona.
 
 
 ## Machine Learning en un árbol de decisión
@@ -80,13 +80,13 @@ Por ejemplo: Si tienes 10 sospechosos en tu Adivina Quién y 5 de ellos usan len
 Entonces, el índice Gini es la herramienta que podemos utilizar para hacer que nuestro árbol elija la caracteristica que separará mejor nuestros datos. Para ver cómo podemos emplear esta herramienta y construir nuestro árbol de decisión, echaremos un vistazo al [ejemplo 02.](Ejemplo02/Ejemplo02.ipynb)
 
 ## Reto 02
-> Utiliza [éste código](Reto02/Reto02.ipynb) para editar las características y echa un vistazo a los árboles de decisión que se generan. ¿Qué puedes notar de cada uno de ellos? ¿Qué pasa cuando juegas con las características en los datos de prueba?
+> Utiliza [éste código](Reto02/Reto02.ipynb) para editar las características y echa un vistazo a los árboles de decisión que se generan. ¿Qué puedes notar de cada uno de ellos? ¿Qué pasa cuando juegas con las características en los datos de prueba? **PROTIP** Aqui necesito que notes un fenómeno importante, si tu equipo se da cuenta, por favor háganmelo saber. 
 
 ## Random Forests
 
 ![Random Forest](imgassets/randomforest1.gif)
  
-Si prestaste mucha atención al Reto 02, te darás cuenta de que tenemos un problema al utilizar un árbol de decisión: una sola característica puede inclinar la balanza hacia una u otra clase y cosas tan simples y triviales como ponerte lentes puede hacer que un clasificador basado en árboles de decisión falle catastróficamente. 
+Si prestaste mucha atención al Reto 02 y hallaste el fenómeno que quería mostrarte, ¡Felicidades! te darás cuenta de que tenemos un problema al utilizar un árbol de decisión: una sola característica puede inclinar la balanza hacia una u otra clase y cosas tan simples y triviales como ponerte lentes puede hacer que un clasificador basado en árboles de decisión falle catastróficamente. 
 
 Irónicamente, la ventaja de un árbol de decisión al mismo tiempo se vuelve su principal desventaja.
 
