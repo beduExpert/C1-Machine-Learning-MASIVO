@@ -81,7 +81,7 @@ Igualmente, hemos visto cómo funcionan las redes neuronales artificiales. La me
 - Si puedes utilizar un clasificador mucho más sencillo, es recomendable que intentes primero con otro. Las redes neuronales son una herramienta de doble filo ya que el proceso de entrenamiento puede ser demasiado lento, sobre todo si otro clasificador mas rápido te da resultados satisfactorios. 
 
 ## Reto 01.
-> Intenta comparar Random Forests y Redes Neuronales Artificiales. Una contra otra. MUY IMPORTANTE: Utiliza el mismo dataset de entrenamiento para ambos clasificadores y el mismo dataset de prueba, para asegurarte de que es una competencia justa. 
+> Intenta comparar Random Forests y Redes Neuronales Artificiales. Una contra otra. MUY IMPORTANTE: Utiliza el mismo dataset de entrenamiento para ambos clasificadores y el mismo dataset de prueba, para asegurarte de que es una competencia justa. Lo mejor es que la mitad del equipo hagan redes neuronales, y la otra mitad del equipo Random Forests, pero tienen que usar el mismo dataset de entrenamiento, y el mismo dataset de prueba. 
 
 [Resultado del Reto 01 aquí.](Reto01/Reto01.ipynb)
 

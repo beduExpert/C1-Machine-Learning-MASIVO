@@ -2,7 +2,7 @@
 
 #### Objetivo: Desarrollar un sistema de procesamiento de imágenes con machine learning. Reconocer cómo las operaciones simples en las imágenes pueden llevar a generar descriptores robustos y complejos para la tarea de clasificación con Machine Learning. 
 
-¡Bienvenido a la última sesión del curso de Machine Learning para Bedu Tech! En esta sesión tocaremos un tema que encadena este primer módulo del programa (Machine Learning) con el siguiente. En esta sesión trabajaremos con imágenes digitales y su procesamiento. 
+¡Bienvenido a la última sesión del curso de Machine Learning para Bedu Tech! En esta sesión tocaremos un tema que encadena este primer módulo del programa (Machine Learning) con programas futuros. En esta sesión trabajaremos con imágenes digitales y su procesamiento. 
 
 La razón de que abordemos este tema es que muchas aplicaciones de Machine Learning trabajan sorpresivamente bien con imágenes digitales y, además, hoy en día todos los teléfonos pueden capturarlas, por lo que embeber un sistema de Machine Learning en un teléfono es algo 100% realizable.
 
