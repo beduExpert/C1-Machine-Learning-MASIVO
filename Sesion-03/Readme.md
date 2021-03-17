@@ -85,11 +85,13 @@ El algoritmo de K-medias solamente clasifica, pero es nuestro deber interpretar 
 - Repita ese proceso para todas las muestras que le demos.
 
 ## Reto 01:
-> Programa una librería que haga las siguientes funciones:
-1. Una función que calcule la distancia euclidiana de un punto contra todos los centroides. Para ello, utiliza la función np.normv(muestra-centroide)
+> Por cada equipo, programen una librería (un archivo.py) que haga las siguientes funciones:
+1. Una función que calcule la distancia euclidiana de un punto contra todos los centroides. Para ello, utiliza la función np.norm(muestra-centroide)
 2. Una función que obtenga el índice del centroide mas cercano con np.argmin(distancias)
 3. Usando las funciones del paso 1 y 2, crea una función que los repita para cada uno de los puntos de un dataset.
 4. (Extra): Haz celdas que prueben que todas las funciones operen como esperas.
+
+Dividan las tareas entre todos los miembros del equipo. No es buena idea que una sola persona programe todo. Para mejores resultados, cada integrante intente hacer por separado los 4 puntos, y comparen resultados. 
 
 Una vez que lo consigas, puedes comparar con la solución del reto 01 [aquí](Reto01/Reto 01.ipynb)
 
@@ -116,7 +118,7 @@ Y luego promediar el accuracy como se muestra en este ejemplo:
 ![accuracy de k-means](imgassets/kmeansaccuracy.png)
 
 ## Reto 02:
-> Haz funciones que: 
+> El equipo debe realizar funciones que: 
 1. Separen los datos de prueba: que extraigan todas las muestras con una misma etiqueta. Para ello puedes usar (numpy.where)
 2. Calculen el accuracy: Saca a qué centroides pertenecen los datos de una clase con el código del reto 01, luego calcula la moda de todos los resultados. Todos los resultados que salgan de la moda son considerados errores. 
 TIP: Puedes utilizar [esta función para calcular la moda](Ejemplo02/Ejemplo02.ipynb)

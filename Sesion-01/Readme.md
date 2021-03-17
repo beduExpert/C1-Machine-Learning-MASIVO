@@ -52,17 +52,17 @@ Y nos dé como respuesta: **Un programa que haga el vínculo entre las entradas 
 *Programación Tradicional Vs Machine Learning*
 
 ### Reto 01:
->Piensa en un problema que hayas intentado programar y no lo hayas logrado. 
-¿Qué fue lo que te falló?. 
-Si hubieras tenido un sistema que aprendiera solo, ¿Habrías podido solucionarlo?
-¡Por favor, compártenos tu experiencia!
+>En equipos, piensen y definan un problema que hayan intentado programar y no lo hayan logrado exitosamente. 
+¿Qué fue lo que falló?. 
+Si hubieras tenido un sistema que aprendiera solo, ¿Habrían podido solucionarlo? ¿Cómo lo hubieran solucionado?
+Discutamos sus hallazgos. 
 
 ## ¿Cómo es que una computadora puede aprender?
 
 Para poder responder esta pregunta, primero comencemos con un reto muy simple.
 
 ### Reto 02:
-> Define: ¿Qué es aprender? ¿Cómo puedes definir qué aprendes? ![Hmm...](imgassets/Thinking.jpg)
+> Definamos: ¿Qué es aprender? ¿Cómo puedes definir qué aprendes? ![Hmm...](imgassets/Thinking.jpg)
 
  *(Spoilers en las siguientes líneas!)*
 
@@ -175,7 +175,7 @@ Felicidades, esta es la fórmula de la distancia euclidiana, y ahora puedes comp
 
 
 ### Reto 03:
-> Menciona al menos una aplicación en donde la distancia (o la resta) pueda ayudarte a resolver un problema. **PROTIP**: Hay muchisimas aplicaciones en montones de áreas! Solo tienes que utilizar tu imaginación. ![Wut?](imgassets/MathIsFun.png)
+> Por equipo, mencionen **al menos** una aplicación en donde la distancia (o la resta) pueda ayudarte a resolver un problema. **PROTIP**: Hay muchisimas aplicaciones en montones de áreas! Solo tienes que utilizar tu imaginación. ![Wut?](imgassets/MathIsFun.png)
 
 **(SPOILERS MAS ADELANTE!)**
 

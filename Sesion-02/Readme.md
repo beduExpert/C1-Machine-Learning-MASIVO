@@ -81,7 +81,7 @@ El método de creación de particiones es:
 Para ver el código de cómo hacer una partición, sigue este link: [Ejemplo 01](Sesion-02/Ejemplo-01)
 
 ## Reto 01:
-> ¡Con este código [Reto 01](Sesion-02/Reto-01) utiliza y juega con la función de particionar! Prueba con diferentes combinaciones. Si tienes un dataset para tu proyecto, úsalo para separar los datos en tres grupos. **PROTIP:** Mantén está función entre tus códigos, porque será útil no sólo para este módulo, sino en general cuando hagas Machine Learning.
+> ¡Con este código [Reto 01](Sesion-02/Reto-01) utiliza y juega con la función de particionar! Prueba con diferentes combinaciones. Si tienes un dataset para tu proyecto, úsalo para separar los datos en tres grupos. **PROTIP:** Mantén está función entre tus códigos, porque será útil no sólo para este módulo, sino en general cuando hagas Machine Learning. Cada equipo debe de tener una función de particionar que sirva para sus proyectos. 
 
 ## Validación cruzada.
 
@@ -123,7 +123,7 @@ Promedias los resultados de todas las rondas, y sabes qué tan bueno es tu algor
 Para verlo en acción, puedes echar un vistazo al [Ejemplo 02](Sesion-02/Ejemplo-02)
 
 ## Reto 02:
-> ¡Intenta utilizar K-Fold en tu dataset en este [cuaderno!](Sesion-02/Reto-02) Nota que K-Fold va a requerir que hagas K entrenamientos más adelante. Verifica que los datos estén separados como lo esperas, e intenta con números pequeños (2-fold, o 3-fold)
+> ¡Intenta utilizar K-Fold en tu dataset en este [cuaderno!](Sesion-02/Reto-02) Nota que K-Fold va a requerir que hagas K entrenamientos más adelante. Verifica que los datos estén separados como lo esperas, e intenta con números pequeños (2-fold, o 3-fold). Cada equipo debe tener un K-Fold funcionando. 
 
 ## Leave-One-Out Cross Validation
 
@@ -195,4 +195,4 @@ Como podrás haber imaginado, esto no funciona para una matriz multiclase, por l
 $Accuracy=\frac{\sum{Diagonal}}{Numero\ de\ muestras}$
 
 ## Reto 04:
-> Utiliza el [siguiente código](Sesion-02/Reto-04) y genera una matriz de confusión. Con ello, calcula la precisión, sensibilidad y especificidad. Te recomiendo que mantengas estos códigos en un archivo de Python para que puedas importarlos después, ya que a partir de la siguiente sesión utilizaremos mucho estas métricas y la separación de clases.
+> Utiliza el [siguiente código](Sesion-02/Reto-04) y genera una matriz de confusión. Con ello, calcula la precisión, sensibilidad y especificidad. Te recomiendo que mantengas estos códigos en un archivo de Python para que puedas importarlos después, ya que a partir de la siguiente sesión utilizaremos mucho estas métricas y la separación de clases. Cada equipo debe tener al final de este reto los 4 retos dentro de funciones en un archivo de Python (.py)
