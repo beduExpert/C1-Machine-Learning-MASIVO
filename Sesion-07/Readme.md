@@ -83,8 +83,6 @@ Igualmente, hemos visto cómo funcionan las redes neuronales artificiales. La me
 ## Reto 01.
 > Intenta comparar Random Forests y Redes Neuronales Artificiales. Una contra otra. MUY IMPORTANTE: Utiliza el mismo dataset de entrenamiento para ambos clasificadores y el mismo dataset de prueba, para asegurarte de que es una competencia justa. Lo mejor es que la mitad del equipo hagan redes neuronales, y la otra mitad del equipo Random Forests, pero tienen que usar el mismo dataset de entrenamiento, y el mismo dataset de prueba. 
 
-[Resultado del Reto 01 aquí.](Reto01/Reto01.ipynb)
-
 ## Clasificador 3: Support Vector Machine (SVM).
 
 Este clasificador no lo hemos visto en sesiones pasadas y la razón es importante: Las matemáticas detrás de ellos son bastante complejas para que este clasificador pudiésemos considerarlo intuitivo. Sin embargo, trataremos brevemente la funcionalidad de la máquina de soporte vectorial. 
@@ -113,8 +111,6 @@ El entrenamiento de una máquina de soporte vectorial no es fácil tampoco; en a
 
 ## Reto 02.
 > ¿Puedes añadir la SVM y comparar los tres para ver que tal funcionan? Compáralos con algún dataset que tengas (o en su defecto con blobs...) y enuncia quién es el ganador en cada una de las rúbricas (por ejemplo, en especificidad gana Random Forest, pero en Sensibilidad gana SVM). MUY IMPORTANTE: Utiliza el mismo dataset de entrenamiento para los tres clasificadores y el mismo dataset de prueba, para asegurarte de que es una competencia justa. 
-
-[Resultado del Reto 02 aquí.](Reto02/Reto02.ipynb)
 
 
 ## Clasificador 4: Clasificador Bayes Ingenuo (Naïve Bayes)
@@ -146,4 +142,3 @@ Puedes ver un ejemplo de cómo se implementa [Naïve Bayes aqui.](Ejemplo02/Ejem
 ## Reto 03.
 > ¿Puedes añadir el clasificador Naïve Bayes para comparar a todos? Compáralos con algún dataset que tengas (o en su defecto con blobs...) y enuncia quién es el ganador en cada una de las rúbricas (como en el reto 02). MUY IMPORTANTE: Recuerda utilizar el mismo dataset de entrenamiento para todos los clasificadores y el mismo dataset de prueba, para asegurarte de que es una competencia justa. 
 
-[Resultado del Reto 03 aquí.](Reto03/Reto03.ipynb)

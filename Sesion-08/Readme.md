@@ -53,7 +53,6 @@ Para continuar aprendiendo a cargar y utilizar imágenes y canales, te sugiero q
 ![ensamble](imgassets/assemble.png)
 ¿Qué notas al hacerlo?
 
-Solución al [reto 01 aquí.](Reto01/Reto01.ipynb)
 
 ## Procesamiento pixel-wise
 
@@ -109,7 +108,6 @@ Ahora sí, ya que tienes toda la explicación completa, te invito a observar el 
 ## Reto 02: 
 > ¡Hagamos un segmentador que corte una imagen por ti! Con los algoritmos del ejemplo 01 y 02 y con una imagen sobre un fondo blanco, realiza lo siguiente: 1) transforma la imagen en escala de grises. 2) Binariza y genera negativos, de tal manera que los pixeles del objeto sean 1 (no 255) y finalmente 3) multiplica los canales de la imagen original contra la imagen binaria utilizando np.multiply. Esto hará que los pixeles que esten marcados con 1 se conserven y los que estén marcados con 0 se borren. 
 
-Puedes ver el resultado del reto 02 [aquí.](Reto02/Reto02.ipynb)
 
 ## Descriptores de imágenes
 
@@ -154,5 +152,3 @@ También debes de saber que los histogramas no son perfectos descriptores. Suele
 
 ## Reto 03: 
 > Con tres imágenes parecidas, en fondo blanco y del mismo tamaño, genera histogramas. Luego repite el proceso con otro objeto distinto, pero las mismas características (fondo blanco, mismo tamaño de imagen). Coteja los histogramas visualmente para ver que realmente los objetos parecidos tienen histogramas parecidos. 
-
-Solución al reto 03 [aquí.](Reto03/Reto03.ipynb)

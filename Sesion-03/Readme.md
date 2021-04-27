@@ -93,8 +93,6 @@ El algoritmo de K-medias solamente clasifica, pero es nuestro deber interpretar 
 
 Dividan las tareas entre todos los miembros del equipo. No es buena idea que una sola persona programe todo. Para mejores resultados, cada integrante intente hacer por separado los 4 puntos, y comparen resultados. 
 
-Una vez que lo consigas, puedes comparar con la solución del reto 01 [aquí](Reto01/Reto 01.ipynb)
-
 ## Entrenamiento de K-means: Obteniendo los centroides
 
 La sesión pasada nos dedicamos a separar datos en entrenamiento y prueba: En este caso utilizaremos la misma separación del dataset en 60% de entrenamiento, y 40% prueba. 
@@ -122,8 +120,6 @@ Y luego promediar el accuracy como se muestra en este ejemplo:
 1. Separen los datos de prueba: que extraigan todas las muestras con una misma etiqueta. Para ello puedes usar (numpy.where)
 2. Calculen el accuracy: Saca a qué centroides pertenecen los datos de una clase con el código del reto 01, luego calcula la moda de todos los resultados. Todos los resultados que salgan de la moda son considerados errores. 
 TIP: Puedes utilizar [esta función para calcular la moda](Ejemplo02/Ejemplo02.ipynb)
-
-La solución del reto se encuentra [aquí](Reto02/Reto 02.ipynb)
 
 ## Sistemas de recomendación por K-means
 

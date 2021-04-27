@@ -123,8 +123,6 @@ Para ello, vamos a realizar el entrenamiento del regresor con el siguiente [ejem
 >![gypsy](imgassets/gypsy.jpg)
 > Toma el código del [ejemplo 01](Ejemplo01/Ejemplo01.ipynb) y modifica los datos de entrada: agrega, cambia o quita datos. Revisa cómo eso afecta las predicciones. También aumenta los datos de entrenamiento y reduce los de prueba; y como extra, intenta normalizar los datos para mejorar su rendimiento.
 
-La solución del reto 01 se encuentra [aquí.](Reto01/Reto01.ipynb)
-
 ## Regresión polinomial
 
 Hasta ahora hemos visto lo que pasa cuando tienes datos que se comportan como una línea recta. Pero ¿qué pasa cuando tienes datos que se curvean? 
@@ -140,8 +138,6 @@ Para ejemplificar esto, veamos [el siguiente cuaderno.](Ejemplo02/Ejemplo02.ipyn
 
 ## Reto 02:
 >Edita el polinomio y revisa cómo afecta las predicciones. Nota cómo un polinomio muy elevado sobre-entrenará al regresor y fallará, mientras que un polinomio muy pequeño podría no acercarse tanto a los puntos.
-
-La solución al reto se encuentra [aquí](Reto02/Reto02.ipynb)
 
 ## Predicción de series de tiempo
 
@@ -175,5 +171,3 @@ Puedes ver el código que genera estos pasos en [el siguiente ejemplo](Ejemplo03
 
 ## Reto 03:
 >![gypsy2](imgassets/gypsy2.gif)Con lo aprendido en la sesión, intenta mejorar las predicciones. Intenta con más (o menos) datos de entrada, más (o menos) datos de entrenamiento y grados polinomiales en lugar de datos lineales. 
-
-La solución del reto se encuentra [aquí](Reto03/Reto03.ipynb)

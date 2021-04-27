@@ -93,7 +93,6 @@ Para ello, lo primero que vamos a construir es una neurona artificial (desde cer
 
 **Nota importante:** Todos los integrantes del equipo deben tener una neurona artificial creada antes de continuar. 
     
-Puedes ver la solución al reto en [este cuaderno.](Reto01/Reto01.ipynb) 
 
 Como nota importante, durante esta sesión crearemos una red neuronal desde cero. Sin embargo, al final de la sesión haremos el entrenamiento con SciKit Learn. **Es sumamente importante aprender a construir una red neuronal para entender cómo mejorarla.**
 
@@ -147,9 +146,6 @@ Para ver cómo se puede programar esto, por favor [revisa este ejemplo.](Ejemplo
 
 **Nota importante:** Todos los integrantes del equipo deben tener este paso completado antes de continuar. 
  
-
-Puedes ver el resultado del [Reto 02 aquí.](Reto02/Reto02.ipynb)
-
 Con lo que hemos programado en los dos retos (el Reto 01 y Reto 02), ahora mismo hemos creado una sola capa de neuronas. Todas las neuronas de esa capa buscan una misma solución. Sin embargo, todas las neuronas de esa capa son independientes y no se comunican entre sí. 
 
 A diferencia de los random forests, una red neuronal podría verse beneficiada de que cada una de las neuronas se comuniquen para que combinemos los resultados.
@@ -178,5 +174,3 @@ En recomendación profesional, te sugiero utilizar las salidas *one-hot* ya que 
 
 ## Reto 03:
 >Con lo aprendido en el ejemplo 04 y 05, construye tu propio clasificador multiclase. Genera blobs de varias clases (por ejemplo, 4 clases diferentes) y crea una estructura neuronal. Te recomiendo poner tantas salidas como clases. Al final, evalúa sumando la diagonal de la matriz de confusión con np.trace
-
-Puedes ver la solución de este reto [aquí.](Reto03/Reto03.ipynb)
