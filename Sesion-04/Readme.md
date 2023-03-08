@@ -91,37 +91,13 @@ Sé que han sido muchas matemáticas. Por ende, es importante que dejes que esto
 
 ![psyduck](imgassets/psyduck.gif)
 
-## Ejemplos de predicción en costos de casas
+## Ejemplo 01:
 
-Para empezar a tratar la predicción, vamos a utilizar un ejemplo de una empresa de bienes raíces que busca saber cuánto cuesta una casa. Su objetivo es obtener el valor promedio de las casas ocupadas (en miles de USD) y para ello ha recopilado los siguientes datos:
-
-- **CRIM:** Tasa de crimen per-capita 
-- **ZN:** Proporción de tierras para uso residenciales
-- **INDUS:** Proporción de acres de negocios por pueblo
-- **CHAS:** 1 si la propiedad colinda con el rio Charles, 0 si no
-- **NOX:** Concentracón de ácido nítrico. (parte por 10 millones)
-- **RM:** Cantidad promedio de habitaciones por vivienda
-- **AGE:** Proporción de unidades construidas antes de 1940 con dueño
-- **DIS:** Distancias a 5 centros de empleo de Boston
-- **RAD:** Índice de accesibilidad a vías rápidas
-- **TAX:** Impuestos por cada 10,000 USD de costo
-- **PTRATIO:** Radio maestro-pupilo por pueblo
-- **B:** 1000(Bk — 0.63)², donde Bk es la proporcion de personas descendientes de afroamericanos
-- **LSTAT :** Porcentaje de personas de estratos bajos de la población
-
-Y lo que desea obtener la empresa es la estimación de la variable: 
-
-- **MEDV:** Valor promedio de casas ocupadas (en miles).
-
-Recordemos que el regresor lineal va a predecir precios y para ello va a recibir los parámetros que le digas que reciba. Igualmente la predicción que necesites será la que especifiques, por lo que vamos a cablear el regresor de la siguiente manera: 
-
-![regressor housing](imgassets/regressorhousing.png)
-
-Para ello, vamos a realizar el entrenamiento del regresor con el siguiente [ejemplo.](Ejemplo01/Ejemplo01.ipynb)
+Vamos a utilizar el dataset "melbourne_housing-clean.csv". Primero, exploraremos los datos para entenderlos. Después, aplicaremos algunas de las transformaciones que aprendimos en la sesión 2 para preparar el dataset. Finalmente, entrenaremos un modelo de Regresíón Lineal con el dataset y evaluaremos su precisión.
 
 ## Reto 01:
 >![gypsy](imgassets/gypsy.jpg)
-> Toma el código del [ejemplo 01](Ejemplo01/Ejemplo01.ipynb) y modifica los datos de entrada: agrega, cambia o quita datos. Revisa cómo eso afecta las predicciones. También aumenta los datos de entrenamiento y reduce los de prueba; y como extra, intenta normalizar los datos para mejorar su rendimiento.
+> Toma el código del Ejemplo 01 y utilízalo para entrenar tu propio modelo utilizando el dataset de tu preferencia. ¡Recuerda aplicar las transformaciones adecuadas para mejorar la precisión del modelo!
 
 ## Regresión polinomial
 
@@ -134,10 +110,10 @@ Si en un plot observas un patrón curvo, quizás requieres que tu regresor se cu
 
 Así es como se ve un polinomino de primer, segundo y tercer grado. Como se puede notar, las líneas se adaptan mejor y el error se reduce. Pero es importante notar que subir el grado del polinomio también conlleva sus costos: No siempre un polinomio de mayor grado puede ser lo mejor para un problema, a veces el grado del polinomio elevado hace mas mal que bien.
 
-Para ejemplificar esto, veamos [el siguiente cuaderno.](Ejemplo02/Ejemplo02.ipynb) Y con base en el ejemplo, hagamos el siguiente reto.
+Para ejemplificar esto, vamos a entrenar varios modelos polinomiales con el dataset que tenemos. También aprenderemos cómo comparar su precisión para elegir el mejor de ellos.
 
 ## Reto 02:
->Edita el polinomio y revisa cómo afecta las predicciones. Nota cómo un polinomio muy elevado sobre-entrenará al regresor y fallará, mientras que un polinomio muy pequeño podría no acercarse tanto a los puntos.
+> Aplica Regresión Polinomial al dataset que elegiste.
 
 ## Predicción de series de tiempo
 
