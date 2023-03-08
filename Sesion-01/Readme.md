@@ -46,7 +46,7 @@ Y bueno, ¿cómo rompemos esos límites? Necesitamos generar un algoritmo que te
 - Entradas del sistema
 - Salidas esperadas
 
-Y nos dé como respuesta: **Un programa que haga el vínculo entre las entradas y las salidas esperadas**
+Y nos dé como respuesta: **Una función matemática que haga el vínculo entre las entradas y las salidas esperadas**
 
 ![Programación tradicional VS Machine Learning!](imgassets/TraditionVsML.png)
 *Programación Tradicional Vs Machine Learning*
@@ -88,7 +88,7 @@ Sí sí, lo sé, a nadie le entusiasma trabajar con derivadas, sobre todo si las
 
 Una derivada tiene un montón de definiciones, eso lo sabemos bien desde la preparatoria, pero de entre todas las definiciones, la que mas nos interesa es la que reza: *"Una derivada es una razón de cambio"*
 
-O en un lenguaje mas coloquial: *"Una derivada nos dice que tantos cambios hay entre dos puntos."* 
+O en un lenguaje mas coloquial: *"Una derivada nos dice que tantos cambios hay entre dos puntos. Nos dice también si la función crece o decrece en un intervalo dado."* 
 
 Por ejemplo, observa la siguiente imagen:
 ![Derivadas](imgassets/Derivative.gif)
@@ -97,7 +97,7 @@ Lo que nos interesa mas que nada de esa imagen es ese triangulo. Entre mas grand
 
 Si si, muy bonito, y bueno, ¿eso qué tiene que ver con Machine Learning? 
 
-Una derivada es la medida de que tantos errores comete un sistema. A mayor derivada, mas errores comete, y el objetivo de nuestros sistemas de Machine Learning es **reducir esa derivada a lo mínimo posible**
+Usamos derivadas como la medida de qué tantos errores comete un sistema. A mayor derivada, mas errores comete, y el objetivo de nuestros sistemas de Machine Learning es **reducir esa derivada a lo mínimo posible**
 
 Veamos algunos ejemplos interesantes de cómo las derivadas hacen cosas con Machine Learning. 
 
@@ -124,68 +124,6 @@ La idea del descenso en gradiente es tratar de hallar el mínimo error posible. 
 En este caso la esfera desciende hasta llegar al mínimo error. Esto quiere decir que el sistema ha aprendido eficazmente. Sin embargo, debes de saber que hay veces en las que ese error no siempre se reduce y se queda estancado, a eso se le llama un *"mínimo local"*. Tristemente eso no nos sirve de nada en una I.A. Ya que un mínimo local suele fallar muchisimo.
 
 ![Minimo local](imgassets/localminima.gif)
-
-## Método de aprendizaje 2: Comparativas.
-
-Entonces, un método de aprendizaje que te puede servir muchisimo (sobre todo en las siguientes dos sesiones) es el método de comparativas. Y es bastante sencillo de implementar: 
-
-- Toma un dato y comparalo contra otros. 
-  - Si el dato es parecido, quiere decir que son del mismo conjunto. 
-  - Si el dato no se parece mucho, quiere decir que no son del mismo conjunto. 
-
-Para ello debe haber una manera eficaz de comparar dos datos. Una manera de comparar eficazmente se llama **Distancia Euclidiana**
-
-![Minimo local](imgassets/euclideandistance.png)
-
-Antes de que nos asustemos por tantas ecuaciones, tomemos en cuenta lo siguiente: La mejor manera de comparar dos datos es por medio de distancias: La distancia nos dice que tanto (numéricamente) dos datos se parecen.
-
-- ¿Los datos son iguales? Las distancias son cero. 
-
-- ¿Los datos son diferentes? Las distancias son mayores a 0. 
-
-Como tip, si puedes medir un dato variable contra un valor fijo de referencia, siempre puedes ajustar ese dato para acercarte al "ideal". 
-
-### Ejemplo 02: Distancias euclidianas.
-
-Supongamos que tenemos dos muestras (u objetos) que queremos comparar: A y B. Supongamos también que los objetos son un vector cada uno, con un solo dato en el índice 0.
-
-$ A = [3]$
-
-$ B = [7]$
-
-La distancia entre A y B está dado por la diferencia (o la resta) de estos dos. Pero la distancia la vamos primero a elevar al cuadrado y luego sacarle raíz cuadrada (para que siempre sea un valor positivo) Entonces...
-
-$ distancia(A,B) = \sqrt{(3 - 7)^2} = \sqrt{(-4)^2} = 4$ 
-
-Si, ahora mismo esto parece un *overkill* y no hay necesidad de tanta violencia para un dato. Pero supongamos que ahora A y B tienen 2 datos en su vector en lugar de uno solo.
-
-$ A = [3,5]$
-
-$ B = [7,10]$
-
-El ejemplo funciona exactamente igual:
-
-$ distancia(A,B) = \sqrt{(3 - 7)^2 + (5 - 10)^2} = \sqrt{(-4)^2 + (-5)^2} = \sqrt{16 + 25} = 6.403124$  
-
-Habiendolo entendido para 2 valores, podemos extenderlo a cuantos valores quieras.
-
-$ distancia(A,B) = \sqrt{(A_1 - B_1)^2 + (A_2 - B_2)^2 + \cdots} = \sqrt{\sum_{i=1}^N{(A_i - B_i)^2}}$  
-
-Felicidades, esta es la fórmula de la distancia euclidiana, y ahora puedes comparar que tan parecidos son dos puntos.
-
-
-### Reto 03:
-> Por equipo, mencionen **al menos** una aplicación en donde la distancia (o la resta) pueda ayudarte a resolver un problema. **PROTIP**: Hay muchisimas aplicaciones en montones de áreas! Solo tienes que utilizar tu imaginación. ![Wut?](imgassets/MathIsFun.png)
-
-**(SPOILERS MAS ADELANTE!)**
-
-Un ejemplo bastante cool es el de distancia en imágenes. Los píxeles de una imagen pueden restarse entre un cuadro y otro:
-- Si dos imágenes no tienen cambios, la resta es 0 porque los cuadros son la misma imagen.
-- Pero si los dos cuadros (frames) cambian, quiere decir que algo se movió. En los puntos donde hay movimiento hay pixeles encendidos en color. 
-
-Con una simple resta puedes generar un sistema de detección de movimiento. Mejor aún: Si aplicas la distancia euclidiana entre dos cuadros, puedes definir que tanto movimiento hubo. Los sistemas de seguridad por videovigilancia confían mucho en este principio. 
-
-![Crees que estas siluetas de videovigilancia me hacen ver mas gordo?](imgassets/Surveillance.png)
 
 ## Aplicaciones de Machine Learning en la Industria
 
@@ -223,20 +161,16 @@ Incluso los sistemas y servicios de salud se pueden ver beneficiados por Machine
 
 ![Salud pública y prevención](imgassets/Health.png)
 
+### Arte y creatividad
+
+Las industrias creativas están siendo profundamente transformadas por ML en este momento. ¡Estos algoritmos generativos nos están haciendo cuestionar qué significa ser creativo y cómo funciona la creatividad! Midjourney, Dall-e, Stable Diffusion, ChatGPT, etc son algunos de los ejemplos más sonados en este momento.
+
+Otros algoritmos existen para generar voz a partir de texto, para generar música, para cambiar el timbre de la voz ¡y muchas cosas más!
+
 ## Reto 04:
 > ¿Qué industria podría verse beneficada por Machine Learning? ¿Conoces algún caso en el cual se pueda ver beneficiado? **PROTIP:** Un programador debe de saber de todo. Si entiendes un área del conocimiento, puedes generar tecnología de ello. ![Science!](imgassets/Science.jpg)
 
 ## Descriptores para Machine Learning.
-
-Antes de comenzar a hablar de descriptores, necesitaremos que armemos parejas para un reto simple en equipos. Este reto nos dará una buena idea de por donde va el tema.
-
-## Reto 04:
-> Vamos a suponer que tu compañero es ciego:
-- Descríbele un objeto con la mayor cantidad de detalles posible. 
-- No debes mencionar el nombre del objeto o datos obvios (como: "Tiene cuatro patas y hace Miau"). 
-- El debe adivinar que objeto es. 
-- Si lo consigue, cambia de turno 
-![Lo veo y no lo creo](imgassets/Daredevil.jpg)
 
 ###  Entonces ¿Qué es un descriptor?
 
@@ -266,46 +200,6 @@ Igualmente, hay propiedades que no funcionan de la misma manera en todo el mundo
 > *Asumamos que los hombres son mas altos que las mujeres*
 
 Esto puede ser cierto en casi todos los países del mundo, excepto en Holanda, ¡Donde las mujeres suelen ser mas altas que los hombres!
-
-## ¿Por qué programar Machine Learning con Python?
-Python 3 es un lenguaje altamente flexible y es muy sencillo de aprender. Muchos programadores reconocen que Pyhton es el mejor lenguaje para empezar si no tienes experiencia como programador. 
-
-Tienes tipos de datos diferentes para casi todo, y no tienes que complicarte con problemas de lenguaje, sintaxis, o inclusive cosas como manejo de memoria, liberar apuntadores, inicializar variables, etc...
-
-![Coding Infinite](imgassets/PythonCoding.png)
-
-Aunado a ello puedes implementar Python3 como lenguaje modular y hay un montón de herramientas que puedes añadir a Python.
-
-![Coding Infinite](imgassets/PythonModules.png)
-
-Si necesitas usar álgebra lineal, con una sola línea de código ya lo tienes a tu disposición:
-
-`import numpy as np`
-
-¿Necesitas librerías de visión computacional?
-
-`import cv2`
-
-¿Tus datos están en una base de datos o un archivo CSV o un archivo de texto?
-
-`import pandas as pd`
-
-¿Ya terminaste de programar pero quieres hacer tu sistema un servicio web?
-
-`import Flask`
-
-¿Hay un servicio REST del cual quieres extraer datos? así de simple puedes obtenerlos de cualquier servicio REST (con el API necesario):
-
-`import requests
-data = requests.get(‘http://url.com’)
-if data.status_code == 200:
-   print(data.json)`
-    
-Igualmente tienes acceso a programación parelela y acelerada: Numpy contiene elementos de programación que te permiten hacer procesos en paralelo de forma directa. El aprendizaje de tus algoritmos se vuelve mas ágil y con la programación optimizada y paralela los problemas que tienes se resuelven rápidamente, como el caso de redes neuronales (que las veremos mas adelante).
-
-![Neural network](imgassets/NeuralNetwork.gif)
-
-Además de ello, tus aplicaciones puedes subirlas rápidamente a un servicio Web, como los servicios web de Amazon. Amazon tiene un servicio llamado *Amazon Lambda* que te permite tomar tu algoritmo de ML y ejecutarlo cuando sea necesario, en el cual solamente te cobra mientras se ejecuta. Como algo interesante, es que si tu algoritmo toma menos de 5 minutos en entregar resultado, es un buen candidato para ser un servicio Lambda. 
 
 Con lo que hemos visto en esta sesión, es momento de pasar al reto final de la sesión 01:
 

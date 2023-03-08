@@ -38,23 +38,7 @@ Sin embargo, no todo es maravilloso con los algoritmos no supervisados: Los resu
 
 ![chale](imgassets/sad.jpg)
 
-### Algoritmo no supervisado: K-Nearest-Neighbors
-
-Entre los algoritmos más comunes se encuentran los *K-Nearest-Neighbors* (K-vecinos mas cercanos), que consiste en que tomas un dato nuevo y lo comparas contra todos los demás puntos (¿Recuerdas la distancia euclidiana de las sesiones pasadas?).
-
-Ordenas las distancias de la más pequeña a la más grande y conservas solamente las **K** distancias mas pequeñas. Esas **K** distancias votan para elegir a qué grupo pertenece tu nuevo dato. 
-
-Por ejemplo, mira esta gráfica en donde tu nuevo dato es **X**:
-
-![knn](imgassets/knn.gif)
-
-Extrayendo las 5 distancias mas cercanas, podemos ver que 4 pertenecen al conjunto naranja y 1 al conjunto verde. Dada esta votación entre verdes y naranjas, concluímos que **X** pertenece al conjunto naranja.
-
-Una de las desventajas de utilizar K-nearest-neighbors es que tienes que calcular la distancia euclidiana contra todos los puntos de tu dataset. Esto puede ser muy complicado, sobre todo si manejas millones de datos. Además de ello, tienes que ordenarlos de menor a mayor para obtener solamente los *K* datos más cercanos. Por estos problemas, no implementaremos ahora mismo *K-Nearest Neighbors*. Sin embargo, es importante que sepas que existe este algoritmo y que con estas instrucciones puedes implementarlo por tu cuenta. 
-
 ### Algoritmo no supervisado: K-Means
-
-A diferencia de K-nearest-neighbors, k-means (también llamado K-medias) es muchisimo mas eficiente computacionalmente, y te da resultados igual de buenos que K-nearest-neighbors, por lo cual trabajaremos sobre este algoritmo. 
 
 Para empezar a definir el algoritmo de k-means, tenemos que partir del concepto de _centroide_: Un centroide es una representación promedio de cada uno de los grupos que quieres obtener. Por ejemplo, si quieres dividir a tus clientes en tres tipos (digamos: tipo rojo, tipo verde y tipo azul), el centroide será la representación "ideal" de cada uno de los tipos.
 
@@ -77,60 +61,24 @@ Una vez que el algoritmo termine, todos los datos tendrán una clase o grupo aso
 
 Es importante elegir adecuadamente la cantidad de grupos (K) que necesitas: Si eliges *K = 1*, todos los datos pertenecerán al mismo conjunto y no servirá de nada el algoritmo. Si eliges *K = Número de datos*, todos los datos tendrán su propio centroide y tampoco servirá de nada. 
 
-### Librería de utilidades
+#### Reto 1
 
-El algoritmo de K-medias solamente clasifica, pero es nuestro deber interpretar los resultados. Para ello necesitaremos crear una librería auxiliar que:
-- Compare un dato (una muestra) contra todos los centroides. 
-- Determine a qué grupo pertenece esa muestra.
-- Repita ese proceso para todas las muestras que le demos.
+Entrena un modelo de K-Medias con el dataset MallCustomer.csv, clasifica tus datos y separalos por grupos.
 
-## Reto 01:
-> Por cada equipo, programen una librería (un archivo.py) que haga las siguientes funciones:
-1. Una función que calcule la distancia euclidiana de un punto contra todos los centroides. Para ello, utiliza la función np.norm(muestra-centroide)
-2. Una función que obtenga el índice del centroide mas cercano con np.argmin(distancias)
-3. Usando las funciones del paso 1 y 2, crea una función que los repita para cada uno de los puntos de un dataset.
-4. (Extra): Haz celdas que prueben que todas las funciones operen como esperas.
+### Análisis de grupos utilizando gráficas de densidad
 
-Dividan las tareas entre todos los miembros del equipo. No es buena idea que una sola persona programe todo. Para mejores resultados, cada integrante intente hacer por separado los 4 puntos, y comparen resultados. 
+Después de haber separado nuestros datos por grupos, lo más importante es entender qué tipo de datos se encuentran en cada grupo. Nuestra tarea es intentar caracterizar cada grupo para poder entenderlo y aprovecharlo. Con gráficas de densidad podemos hacer comparaciones entre los grupos y de esta manera entender cómo es que son iguales y cómo es que son distintos.
 
-## Entrenamiento de K-means: Obteniendo los centroides
+Tambíén podemos utilizar gráficas 3D para observar visualmente cómo están segmentados nuestros datos de forma espacial.
 
-La sesión pasada nos dedicamos a separar datos en entrenamiento y prueba: En este caso utilizaremos la misma separación del dataset en 60% de entrenamiento, y 40% prueba. 
+#### Reto 2
 
-Una pregunta válida es: "¿Por qué necesitamos salidas de entrenamiento y prueba si el algoritmo es no-supervisado?" Realmente no necesitamos las salidas, pero podemos aprovecharlas para ver qué tan bien se agrupan los datos en clústeres. 
+Utiliza gráficas de densidad para analizar las diferencias y similitudes de los grupos obtenidos en el Reto 1. Elabora una gráfica 3D para visualizar tus datos segmentados espacialmente.
 
-Podemos ver un ejemplo del entrenamiento de K-medias en [este cuaderno](Ejemplo01/Ejemplo 01.ipynb) 
+### Método de Codo
 
-Una vez que hemos entrenado el algoritmo de K-medias y obtuvimos los centroides, vamos a probar que los datos con cada etiqueta estén agrupados en el mismo centroide:
+Por ahora sólo hemos utilizado nuestra intuición para elegir el número de grupos en los que segmenteraremos nuestros datos. Vamos a ver cómo podemos elegir un K analíticamente con ayuda del Método de Codo.
 
-![Prueba de K-Means](imgassets/kmeanstest.png)
+#### Reto 3
 
-Para ello, separamos los datos de prueba en K clases (dependiendo del valor “Y” esperado). En teoría, todas las muestras de una misma clase “Y” deberían tener el mismo centroide.
-
-El calcular el accuracy por cada conjunto de prueba y luego hacer el promedio es válido si todos los conjuntos de prueba tienen la misma cantidad de muestras; si no es así, se tienen que guardar todos los errores y luego calcular el accuracy con: 
-
-$accuracy = \frac{num\ muestras - num\ errores}{num\ muestras} \times 100$
-
-Y luego promediar el accuracy como se muestra en este ejemplo:
-
-![accuracy de k-means](imgassets/kmeansaccuracy.png)
-
-## Reto 02:
-> El equipo debe realizar funciones que: 
-1. Separen los datos de prueba: que extraigan todas las muestras con una misma etiqueta. Para ello puedes usar (numpy.where)
-2. Calculen el accuracy: Saca a qué centroides pertenecen los datos de una clase con el código del reto 01, luego calcula la moda de todos los resultados. Todos los resultados que salgan de la moda son considerados errores. 
-TIP: Puedes utilizar [esta función para calcular la moda](Ejemplo02/Ejemplo02.ipynb)
-
-## Sistemas de recomendación por K-means
-
-Durante esta sesión hemos ido creando varias funciones en una librería de Python (que puedes encontrar como [MLUtilities.py](Ejemplo03/MLUtilities.py)), que incluye calcular la distancia euclidiana, encontrar el centroide mas cercano, clasificar por centroides, separar datos, obtener la moda, y obtener el accuracy del algoritmo de K medias.
-
-¡Utilizando estas funciones en una sola librería, podemos crear un sistema de recomendaciones! Un sistema de recomendaciones aprende de lo que consumes y te recomienda cosas que podrían gustarte. Industrias completas dependen de esta clase de sistemas, como por ejemplo Netflix.
-
-![Porque viste estas películas...](imgassets/netflix.png)
-
-Para construirlo, primero entrenaremos un algoritmo de K-means para obtener un centroide por cada categoría de película. Luego tomaremos una película que el usuario "haya visto" y sacaremos su centroide. Y finalmente, con ese centroide, traeremos todas las películas parecidas. 
-
-![Proceso Kmeans](imgassets/proceso_kmeans.png)
-
-Puedes ver todo el proceso de creación del sistema de recomendación en [este ejemplo](Ejemplo03/Ejemplo03.ipynb)
+Aplica el método de codo, encuentra el K ideal para tu dataset y repite el Reto 1 y 2 con el nuevo K para observar cómo cambian tus conclusiones.

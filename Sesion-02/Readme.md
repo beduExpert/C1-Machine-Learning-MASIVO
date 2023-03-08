@@ -1,10 +1,8 @@
-# Sesión 02: Separación, validación y evaluación para algoritmos de ML  
+# Sesión 02: Preparación de datos para modelos de ML (separación, validación cruzada y transformaciones) y técnicas de evaluación
 
 #### Objetivo: Construir algoritmos de separación de conjuntos de datos en entrenamiento / validación / prueba y algoritmos de evaluación de clasificadores de ML (clasificación binaria y multiclase).       
 
-¡Bienvenido a la segunda sesión de Machine Learning! En esta sesión nos enfocaremos enteramente en crear herramientas que nos serán útiles no solamente en lo que resta del curso, sino en cualquier momento que deseemos implementar Machine Learning.
-
-El primer tema que trataremos es el de separación de datos. A partir de este módulo comenzaremos a utilizar Python 3 constantemente, por lo que te recomiendo tener a la mano tu cuaderno de Jupyter. Te recomiendo que veas los ejemplos, pero que también hagas tus propias implementaciones. Recuerda, la programación es un asunto más de práctica que de memorización.
+Para poder entrenar un modelo de ML, necesitamos asegurarnos de que nuestros datos estén preparados para ello. En esta sesión veremos algunas técnicas para dejar nuestros datos listos para el entrenamiento.
 
 ## Separación de datos.
 
@@ -124,26 +122,6 @@ Para verlo en acción, puedes echar un vistazo al [Ejemplo 02](Sesion-02/Ejemplo
 
 ## Reto 02:
 > ¡Intenta utilizar K-Fold en tu dataset en este [cuaderno!](Sesion-02/Reto-02) Nota que K-Fold va a requerir que hagas K entrenamientos más adelante. Verifica que los datos estén separados como lo esperas, e intenta con números pequeños (2-fold, o 3-fold). Cada equipo debe tener un K-Fold funcionando. 
-
-## Leave-One-Out Cross Validation
-
-Leave-One-Out Cross Validation es llevar el K-fold al extremo: Utilizas todo tu dataset para entrenar, y solamente un dato para probar, sin embargo este dato va oscilando por todo el dataset, esto quiere decir que evalúas dato por dato hasta saber la precisión de tu algoritmo de Machine Learning. 
-
-![Oye tranquilo viejo!](imgassets/LOOCV1.png)
-
-Al final sólo tienes que promediar todos los datos y obtienes qué tan bueno es tu algoritmo. Es bastante difícil de llevar a cabo, pero aquellos datos que tienen un mal desempeño puedes juntarlos y ver por qué no son fácilmente reconocibles. ¿Quizás esos datos tienen algo en común?
-
-Puedes verlo en acción en el [Ejemplo 03](Sesion-02/Ejemplo-03). Los códigos que tienes de K-Fold sirven para hacer el Leave-One-Out cross validation y la modificación es sumamente simple. 
-
-El principal problema de Leave One Out Cross Validation (LOOCV) es que si tienes 10,000 muestras, tendrás que entrenar 10,000 veces para obtener un resultado concluyente. Esto no es un problema si tu entrenamiento es rápido, pero si el entrenamiento dura 10 segundos, con 10,000 muestras... ¡haz cuentas!
-
-$10,000\ muestras \times 10\ segundos = 100,000s = 27.777\ hrs$
-
-![Tu dale, aqui te espero](imgassets/waiting.jpg)
-
-
-## Reto 03:
-> Haz que tu dataset se separe con Leave-One-Out Cross validation en este [cuaderno!](Sesion-02/Reto-03) Puedes modificar la prueba para que tenga más de un dato, si tienes 10,000 datos...
 
 ## Matriz de confusión: Qué tan listo es tu algoritmo.
 
