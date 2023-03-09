@@ -1,6 +1,4 @@
-# Sesión 02: Preparación de datos para modelos de ML (separación, validación cruzada y transformaciones) y técnicas de evaluación
-
-#### Objetivo: Construir algoritmos de separación de conjuntos de datos en entrenamiento / validación / prueba y algoritmos de evaluación de clasificadores de ML (clasificación binaria y multiclase).       
+# Sesión 02: Preparación de datos para modelos de ML y técnicas de evaluación
 
 Para poder entrenar un modelo de ML, necesitamos asegurarnos de que nuestros datos estén preparados para ello. En esta sesión veremos algunas técnicas para dejar nuestros datos listos para el entrenamiento.
 
@@ -174,3 +172,42 @@ $Accuracy=\frac{\sum{Diagonal}}{Numero\ de\ muestras}$
 
 ## Reto 04:
 > Utiliza el [siguiente código](Sesion-02/Reto-04) y genera una matriz de confusión. Con ello, calcula la precisión, sensibilidad y especificidad. Te recomiendo que mantengas estos códigos en un archivo de Python para que puedas importarlos después, ya que a partir de la siguiente sesión utilizaremos mucho estas métricas y la separación de clases. Cada equipo debe tener al final de este reto los 4 retos dentro de funciones en un archivo de Python (.py)
+
+## Transformación de datos para ML
+
+A veces tenemos que aplicar algunas técnicas de transformación a nuestros datos numéricos y categóricos para ayudarle a nuestro modelo a converger más rápido y mejor.
+
+### Normalización
+
+El objetivo es transformar variables para que estén en escalas similares. Hay 4 que son muy comunes:
+
+#### Escalar a un rango
+
+El objetivo es transformar datos numéricos continuos desde su rango natural a un rango estándar (usualmente [0, 1] o [-1, 1]). Ésta es una buena opción cuando las dos siguientes condiciones se cumplen:
+
+- Sabemos aproximadamente los límites inferiores y superiores del rango natural y tenemos pocos o ningún valor atípico.
+- Los datos están aproximadamente distribuidos de manera uniforme a través de todo el rango.
+
+Si hay muchos valores atípicos, la mayoría de los datos se comprimirían en la zona baja del nuevo rango.
+
+#### Clipping
+
+Si tu dataset contiene valores atípicos muy extremos, puedes establecer un valor mínimo y máximo y todos los datos que excedan esos valores se convierten en ese valor. Puedes aplicar Clipping antes o después de otras transformaciones.
+
+#### Escalamiento con log
+
+Puedes escalar tus valores utilizando log para comprimir un rango muy amplio a un rango más estrecho.
+
+Esta técnica es muy útil cuando algunos de tus valores tienen muchos datos, mientras que otros valores tienen muy pocos (una cola muy larga, por ejemplo). Esta distribución es conocida como distribución de ley potencial.
+
+#### Z-Score
+
+Z-Score es una variación de escalamiento que representa el número de desviaciones estándar del valor a la media. La utilizamos para asegurarnos de que nuestra distribución tenga promedio de 0 y desviación estándar de 1. Es muy útil cuando tenemos algunos valores atípicos, pero no tan extremos como para utilizar clipping.
+
+![Transformaciones a datos numéricos continuos](imgassets/transformaciones.png)
+
+### One-Hot Encoding
+
+Cuando tenemos una variable categórica, necesitamos convertirla a valores numéricos para que nuestro modelo pueda procesarla correctamente.
+
+Una primera solución que pareciera muy intuitiva sería convertir cada categoría en un número y listo. El problema con eso es que nuestro modelo aprendería que hay una relación ordinal entre nuestras categorías. Es decir, 2 sería mayor que 1 y 5 sería menor que 10. Pero en realidad las categorías de una variable categórica pocas veces tienen ese tipo de relación. Cuando no tenemos una relación ordinal, tendremos que usar la técnica de One-Hot Encoding, donde cada categoría se convierte en una variable, con un valor posible de 0 o 1.
