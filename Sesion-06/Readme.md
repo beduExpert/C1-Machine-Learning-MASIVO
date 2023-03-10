@@ -80,22 +80,6 @@ Para construir una neurona artificial tenemos que crear ese segmento que decida 
 
 ![neurona2](imgassets/artificialneuron1.png)
 
-Para ello, lo primero que vamos a construir es una neurona artificial (desde cero). No te preocupes, es bastante sencillo.
-
-## Reto 01: Crea una neurona artificial
-> Para crear una neurona artificial tienes que completar tres pasos: 
-   - Crea una función llamada "calcularZ", que haga lo siguiente: 
-      **z = calcularZ(pesos,x,bias) = np.dot(pesos,x) + bias**
-   - Luego, haz una función llamada "activacion" que por ahora será temporal y lo que reciba de entrada retornará de salida:
-      **y_prediccion = activacion(z) = z**
-   - Finalmente, haz una función llamada neurona, que una el paso 1 y el 2.
-     **y_prediccion = neurona(activación(calcularZ(pesos,x,bias)))**
-
-**Nota importante:** Todos los integrantes del equipo deben tener una neurona artificial creada antes de continuar. 
-    
-
-Como nota importante, durante esta sesión crearemos una red neuronal desde cero. Sin embargo, al final de la sesión haremos el entrenamiento con SciKit Learn. **Es sumamente importante aprender a construir una red neuronal para entender cómo mejorarla.**
-
 ## Programando funciones de activación
 
 Ahora mismo tenemos una función de activación simple, que recibe de entrada un valor Z y retorna el mismo valor de salida:
@@ -123,54 +107,18 @@ Una de las razones importantes de usar una función de activación como la sigmo
 
 No te preocupes demasiado por las matemáticas; me interesa mas que tengas las nociones de por qué debemos utilizar una función que tenga derivada. Hay funciones que serían excelentes funciones de activación pero no se pueden derivar, como la función escalón.
 
-## NumPy y Redes Neuronales
+### Ejemplo 1
 
-Ahora mismo, con el Reto 01 hemos creado una sola neurona. Sin embargo, una red neuronal en realidad tiene múltiples neuronas e incluso múltiples capas entre las neuronas, como puedes observar en la siguiente imagen:
+> Vamos a ver cómo programar una red neuronal utilizando Tensorflow, una de las librerías de Deep Learning más utilizadas en la industria.
 
-![neuron layer](imgassets/neuronlayer.png)
+### Reto 1
 
-Sin embargo, programar una red neuronal, neurona por neurona, puede ser leeeento y extenuante. Por ende, NumPy nos puede ayudar a hacer esta misma tarea en un solo paso:si tienes una neurona artificial ya programada y múltiples entradas numpy.dot puede hacer que las entradas se mapeen directamente con los pesos sin que tengas que programar nada más.
+Entrena una red neuronal con Tensorflow utilizando tu propio dataset!
 
-![Input and weight](imgassets/inputandweight.png)
+### Ejemplo 2
 
-Recordando lo que hablamos en el Prework de esta sesión, el producto punto que implementa np.dot te puede ayudar a conectar filas con columnas: Como no podemos conectar filas con filas, necesitas hacer una transposición de la matriz. En otras palabras, sacar la matriz transpuesta de los pesos W, para que se conecten de esta manera:
+Para aprender a evaluar una red neuronal, tenemos que explorar a mucho detalle el tema de underfitting y overfitting. Elaborar gráficas del error en el dataset de entrenamiento y compararlo con el error en el dataset de prueba ayuda muchísimo.
 
-![Weight connections](imgassets/connectionweights.png)
+### Reto 2
 
-Para ver cómo se puede programar esto, por favor [revisa este ejemplo.](Ejemplo03/Ejemplo03.ipynb) Como puedes notar, ¡las funciones que ya has programado en el Reto 01 sirven perfectamente! A NumPy le da igual si usas una o mil neuronas en una capa. Lo único que hicimos fue cambiar el nombre de la función de "neurona" a "capa neuronal".
-
-## Reto 02
-> Para poder utilizar adecuadamente una red neuronal, primero tenemos que crear una función que la inicialice con valores aleatorios. La función debe de:
- - Recibir de entrada el tamaño del vector X y el número de neuronas que quieres implementar.  
- - Retornar de salida una matriz de pesos W, **con números aleatorios** y un array de bias B, igual **con números aleatorios.**
-
-**Nota importante:** Todos los integrantes del equipo deben tener este paso completado antes de continuar. 
- 
-Con lo que hemos programado en los dos retos (el Reto 01 y Reto 02), ahora mismo hemos creado una sola capa de neuronas. Todas las neuronas de esa capa buscan una misma solución. Sin embargo, todas las neuronas de esa capa son independientes y no se comunican entre sí. 
-
-A diferencia de los random forests, una red neuronal podría verse beneficiada de que cada una de las neuronas se comuniquen para que combinemos los resultados.
-
-![neuron layer 2](imgassets/neuronlayer2.png)
-
-Para hacer la comunicación, podemos crear una segunda capa neuronal que recolectará las decisiones de la primera capa y utilizará los datos para tomar la decisión, de la siguiente manera: 
-
-![neuron layer 3](imgassets/neuronlayer3.png)
-
-Podemos ver cómo se programa esto en [el ejemplo 04](Ejemplo04/Ejemplo04.ipynb) en donde podemos ver cómo cuando combinamos varias capas de neuronas podemos darle la vuelta al problema del XOR: Más neuronas trabajando juntas en varias capas, pueden construir comportamientos más inteligentes.
-
-## Clasificación con Redes Neuronales
-
-Dejando de lado el problema del XOR que solucionamos en el ejemplo anterior, podemos echar a andar una red neuronal como un clasificador que aprende de manera supervisada. Ya podemos definir la cantidad de capas de entrada, la cantidad de capas, y tenemos que definir también la capa de salida. 
-
-En el caso de la clasificación binaria (verdadero / falso) podemos decantarnos por dos opciones: utilizar una neurona para que sirva como bandera booleana (0 / 1) o bien, podemos utilizar una salida *one-hot*: Dos neuronas que se activan por separado: una se activa y la otra no. 
-
-![onehotbinary](imgassets/outputbinary1.png)
-
-Las redes neuronales igualmente pueden clasificar para múltiples clases. Una salida codificada como un número binario, o bien una salida *one-hot* en la que solamente el número de neurona de la clase se activa, de la siguiente manera: 
-
-![onehotbinary](imgassets/outputbinary2.png)
-
-En recomendación profesional, te sugiero utilizar las salidas *one-hot* ya que son mas fáciles de entrenar y entregan mejores resultados. Para ver el ejemplo de este caso para un entrenamiento binario, puedes ver [el ejemplo 05.](Ejemplo05/Ejemplo05.ipynb)
-
-## Reto 03:
->Con lo aprendido en el ejemplo 04 y 05, construye tu propio clasificador multiclase. Genera blobs de varias clases (por ejemplo, 4 clases diferentes) y crea una estructura neuronal. Te recomiendo poner tantas salidas como clases. Al final, evalúa sumando la diagonal de la matriz de confusión con np.trace
+Evalúa tu red neuronal. Si tiene un R2 muy bajo, intenta mejorarlo modificando la cantidad de capas, la cantidad de neuronas, el learning rate o el optimizador.
