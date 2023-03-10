@@ -25,24 +25,6 @@ Por lo general, nosotros dibujamos los árboles de decisión al revés: la raíz
 
 ![decisionTree](imgassets/decisiontree1.png)
 
-Pero para no complicarnos demasiado en todo esto, vamos a jugar con algo sencillo: El clásico juego de mesa llamado *Adivina Quién*. Por si ha pasado un largo tiempo desde que jugaste la última vez, las reglas eran mas o menos así:
-
-- Cada jugador toma una carta sin que el otro la vea. 
-- El jugador 1 hace una pregunta que el jugador 2 solo puede contestar con "si" o "no".
-- El jugador 2 hace otra pregunta, del mismo tipo (si/no).
-- Los jugadores con cada pregunta van descartando personajes hasta quedarse con uno solo: ese personaje es la suma de todas las preguntas anteriores. 
-- El primer jugador que adivine la carta del otro gana.
-
-![adivinaquien](imgassets/guesswho.jpg)
-
-¿Te suena familiar? En efecto, el juego trataba de ir tomando decisiones encadenadas e ir descartando personajes (soluciones) hasta quedarnos con una sola persona (solución). Justo así funciona un árbol de decisión: construir las preguntas adecuadas para llegar a la solución que buscamos. 
-
-Podemos crear un simple programa en Python del Adivina Quién en [el siguiente ejemplo.](Ejemplo01/Ejemplo01.ipynb)
-
-## Reto 01
->Tomando como base el código del ejemplo 01, usa el código [que está aquí](Reto01/Reto01.ipynb) y edítalo de tal manera que hagas tus propias preguntas. Prueba con diferentes combinaciones de preguntas, diferentes nombres y características y juega un poco con el código para "adivinar" quién es el sospechoso. Una vez que hayas experimentado un poco con esto por tu cuenta, entre los compañeros de equipo editen la matriz X, agregando personajes con sus características, y vean como funciona.
-
-
 ## Machine Learning en un árbol de decisión
 
 Hasta ahora hemos visto como construir un árbol de decisión de forma manual, haciendo pregunta por pregunta. Ciertamente esto no es muy inteligente, ya que *nosotros* debemos de hacer las preguntas. Sin embargo, ¿cómo podemos hacer para que una computadora haga los árboles de decisiones por nosotros?
@@ -75,18 +57,16 @@ Para poder hacer la menor cantidad de preguntas, el árbol de decisión puede ut
 
 > El coeficiente de Gini originalmente se utilizaba para medir la desigualdad entre ingresos, pero hoy en día se puede aplicar para medir la desigualdad entre cualquier cosa. El coeficiente de Gini marca como 0 a la perfecta igualdad (todos tienen una característica que los separa perfectamente) y 1 a la perfecta desigualdad (solo uno de todos tiene una característica que los separa, y los demás no).
 
-Por ejemplo: Si tienes 10 sospechosos en tu Adivina Quién y 5 de ellos usan lentes, el indice Gini para la pregunta "tiene lentes" es muy cercano a 1. De todas las características, elegimos aquella que tenga el coeficiente de Gini mas pequeño (o más cercano a 0).
-
 Entonces, el índice Gini es la herramienta que podemos utilizar para hacer que nuestro árbol elija la caracteristica que separará mejor nuestros datos. Para ver cómo podemos emplear esta herramienta y construir nuestro árbol de decisión, echaremos un vistazo al [ejemplo 02.](Ejemplo02/Ejemplo02.ipynb)
 
-## Reto 02
-> Utiliza [éste código](Reto02/Reto02.ipynb) para editar las características y echa un vistazo a los árboles de decisión que se generan. ¿Qué puedes notar de cada uno de ellos? ¿Qué pasa cuando juegas con las características en los datos de prueba? **PROTIP** Aqui necesito que notes un fenómeno importante, si tu equipo se da cuenta, por favor háganmelo saber. 
+## Reto 01
+> Entrena un árbol de decisión con un dataset que tengas y evalúa su desempeño.
 
 ## Random Forests
 
 ![Random Forest](imgassets/randomforest1.gif)
  
-Si prestaste mucha atención al Reto 02 y hallaste el fenómeno que quería mostrarte, ¡Felicidades! te darás cuenta de que tenemos un problema al utilizar un árbol de decisión: una sola característica puede inclinar la balanza hacia una u otra clase y cosas tan simples y triviales como ponerte lentes puede hacer que un clasificador basado en árboles de decisión falle catastróficamente. 
+Tenemos un problema al utilizar un árbol de decisión: una sola característica puede inclinar la balanza hacia una u otra clase y cosas tan simples y triviales como ponerte lentes puede hacer que un clasificador basado en árboles de decisión falle catastróficamente. 
 
 Irónicamente, la ventaja de un árbol de decisión al mismo tiempo se vuelve su principal desventaja.
 
@@ -113,7 +93,14 @@ Una vez que todos los árboles se han entrenado se hace un *concilio de árboles
 
 Podemos ver cómo opera un random forest en el [ejemplo 03](Ejemplo03/Ejemplo03.ipynb)
 
-## Reto 03
-> Crea un random forest para separar datos creados por blobs. Puedes utilizar [este código](Reto03/Reto03sinResolver.ipynb) como base. Te recomiendo como extra utilizar tus herramientas de sesiones pasadas para evaluar la capacidad del random forest contra datos de entrenamiento y prueba. 
+## Reto 02
+> Entrena un modelo de Random Forest, evalúalo y compara sus resultados con el árbol de decisión.
 
-La solución al reto se encuentra [aquí](Reto03/Reto03.ipynb).
+## Grid Search
+
+Hay modelos que tienen demasiados parámetros que podemos modificar para alterar su comportamiento. Dado la naturaleza tan compleja de los problemas que resolvemos con ML, a veces resulta bastante difícil tener una solución intuitiva a la pregunta "¿Cuál es el mejor set de parámetros posible?".
+
+Grid Search es una técnica que nos ayuda a explorar automáticamente el espacio de posibilidades de estos parámetros. Nosotros establecemos los parámetros a explorar y los rangos a explorar. El algoritmo toma esas instrucciones y explora todas las posibles combinaciones de los parámetros que hayamos elegido. Al final, escupe cuál es la mejor combinación de parámetros posible.
+
+## Reto 03
+> Explora un espacio de posibilidades utilizando Grid Search. No elijas demasiados parámetros con demasiadas posibilidades o rangos muy amplios, ¡o si no tu búsqueda tomará muchísimo tiempo!

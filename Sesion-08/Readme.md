@@ -1,8 +1,8 @@
-# Sesión 08: Fundamentos de procesamiento de imágenes  
+# Sesión 08: Fundamentos de procesamiento y clasificación de imágenes
 
 #### Objetivo: Desarrollar un sistema de procesamiento de imágenes con machine learning. Reconocer cómo las operaciones simples en las imágenes pueden llevar a generar descriptores robustos y complejos para la tarea de clasificación con Machine Learning. 
 
-¡Bienvenido a la última sesión del curso de Machine Learning para Bedu Tech! En esta sesión tocaremos un tema que encadena este primer módulo del programa (Machine Learning) con programas futuros. En esta sesión trabajaremos con imágenes digitales y su procesamiento. 
+¡Bienvenido a la última sesión del curso de Machine Learning para Bedu Tech! En esta sesión tocaremos un tema que encadena este primer módulo del programa (Machine Learning) con programas futuros. En esta sesión trabajaremos con imágenes digitales y su procesamiento. También entrenaremos una red neuronal para hacer clasificación de imágenes
 
 La razón de que abordemos este tema es que muchas aplicaciones de Machine Learning trabajan sorpresivamente bien con imágenes digitales y, además, hoy en día todos los teléfonos pueden capturarlas, por lo que embeber un sistema de Machine Learning en un teléfono es algo 100% realizable.
 
@@ -152,3 +152,10 @@ También debes de saber que los histogramas no son perfectos descriptores. Suele
 
 ## Reto 03: 
 > Con tres imágenes parecidas, en fondo blanco y del mismo tamaño, genera histogramas. Luego repite el proceso con otro objeto distinto, pero las mismas características (fondo blanco, mismo tamaño de imagen). Coteja los histogramas visualmente para ver que realmente los objetos parecidos tienen histogramas parecidos. 
+
+## Clasificación de imágenes con redes neuronales
+
+Ahora vamos a ver una aplicación práctica de todo esto que hemos aprendido hasta ahora. Crearemos una red neuoronal para clasificar el dataset [Fashion Mnist](https://www.tensorflow.org/datasets/catalog/fashion_mnist#:~:text=Fashion%2DMNIST%20is%20a%20dataset,on%20Papers%20With%20Code%20north_east).
+
+## Reto 04:
+> ¡Evalúa el desempeño de nuestra red neuronal!
