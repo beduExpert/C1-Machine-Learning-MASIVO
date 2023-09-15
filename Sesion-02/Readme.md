@@ -2,6 +2,8 @@
 
 Para poder entrenar un modelo de ML, necesitamos asegurarnos de que nuestros datos estén preparados para ello. En esta sesión veremos algunas técnicas para dejar nuestros datos listos para el entrenamiento.
 
+**IMPORTANTE** Para la realización de los retos usaremos el siguiente archivo, te recomendamos que lo vayas descargando: 
+
 ## Separación de datos.
 
 Los algoritmos de Machine Learning van a aprender invariablemente de los datos que les proporcionemos. Los algoritmos constantemente van a estar ajustándose para adaptarse a los datos mostrados, sin embargo esto no tiene ninguna ciencia. Lo importante es que un algoritmo *pueda predecir y procesar datos que nunca antes ha visto*.
