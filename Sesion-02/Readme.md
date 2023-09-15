@@ -2,7 +2,7 @@
 
 Para poder entrenar un modelo de ML, necesitamos asegurarnos de que nuestros datos estén preparados para ello. En esta sesión veremos algunas técnicas para dejar nuestros datos listos para el entrenamiento.
 
-**IMPORTANTE** Para la realización de los retos usaremos el siguiente archivo, te recomendamos que lo vayas descargando: 
+**IMPORTANTE** Para la realización de los retos usaremos el siguiente archivo, te recomendamos que lo vayas descargando: [cereal.csv](cereal.csv)
 
 ## Separación de datos.
 
@@ -79,7 +79,7 @@ El método de creación de particiones es:
 Para ver el código de cómo hacer una partición, sigue este link: [Ejemplo 01](Sesion-02/Ejemplo-01)
 
 ## Reto 01:
-> ¡Con este código [Reto 01](Sesion-02/Reto-01) utiliza y juega con la función de particionar! Prueba con diferentes combinaciones. Si tienes un dataset para tu proyecto, úsalo para separar los datos en tres grupos. **PROTIP:** Mantén está función entre tus códigos, porque será útil no sólo para este módulo, sino en general cuando hagas Machine Learning. Cada equipo debe de tener una función de particionar que sirva para sus proyectos. 
+> Usando el dataset [cereal.csv](cereal.csv) utiliza y juega con la función de particionar! Prueba con diferentes combinaciones. si es necesario tendrás que realizar también una limpieza. Este ejercicio supone que dominas temas de módulos pasados como, cargar el archivo en un dataframe, eliminar renglones y columnas, etc. Si tienes dudas pregunta al experto asignado.
 
 ## Validación cruzada.
 
@@ -121,7 +121,7 @@ Promedias los resultados de todas las rondas, y sabes qué tan bueno es tu algor
 Para verlo en acción, puedes echar un vistazo al [Ejemplo 02](Sesion-02/Ejemplo-02)
 
 ## Reto 02:
-> ¡Intenta utilizar K-Fold en tu dataset en este [cuaderno!](Sesion-02/Reto-02) Nota que K-Fold va a requerir que hagas K entrenamientos más adelante. Verifica que los datos estén separados como lo esperas, e intenta con números pequeños (2-fold, o 3-fold). Cada equipo debe tener un K-Fold funcionando. 
+> ¡Intenta utilizar K-Fold en el dataset [cereal.csv](cereal.csv) Nota que K-Fold va a requerir que hagas K entrenamientos más adelante. Verifica que los datos estén separados como lo esperas, e intenta con números pequeños (2-fold, o 3-fold).
 
 ## Matriz de confusión: Qué tan listo es tu algoritmo.
 
@@ -172,8 +172,8 @@ Como podrás haber imaginado, esto no funciona para una matriz multiclase, por l
 
 $Accuracy=\frac{\sum{Diagonal}}{Numero\ de\ muestras}$
 
-## Reto 04:
-> Utiliza el [siguiente código](Sesion-02/Reto-04) y genera una matriz de confusión. Con ello, calcula la precisión, sensibilidad y especificidad. Te recomiendo que mantengas estos códigos en un archivo de Python para que puedas importarlos después, ya que a partir de la siguiente sesión utilizaremos mucho estas métricas y la separación de clases. Cada equipo debe tener al final de este reto los 4 retos dentro de funciones en un archivo de Python (.py)
+## Reto 03:
+> Utiliza el dataset [cereal.csv](cereal.csv) y genera una matriz de confusión. Con ello, calcula la precisión, sensibilidad y especificidad. Te recomiendo que mantengas estos códigos en un archivo de Python para que puedas importarlos después, ya que a partir de la siguiente sesión utilizaremos mucho estas métricas y la separación de clases. 
 
 ## Transformación de datos para ML
 
