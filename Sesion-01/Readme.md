@@ -1,129 +1,55 @@
-# Sesión 01: Introducción a Machine Learning
+[`Machine Learning`](../Readme.md) > `Sesión 01`
 
-#### Objetivo: Identificar los conceptos básicos de Machine Learning (como estructura, funcionamiento, algoritmos en Python 3).    
+## Sesión 01: Introducción a Machine Learning
 
-¡Bienvenidos a su curso de Machine Learning (ML) con Python! Dado que esta es la primera sesión, quisiera comentarte cómo será el método de trabajo a partir de hoy:
+<img src="https://github.com/beduExpert/Introduccion-a-Bases-de-Datos-Diciembre-2020/raw/master/imagenes/pizarron.png" align="right" height="100" width="100" hspace="10">
+<div style="text-align: justify;">
 
-1. Dedicaremos una hora y 40 minutos (1:40) a la clase para dar conceptos teóricos, colocar ejemplos y algunos retos sencillos.
-2. Dedicaremos una hora para desarrollar los proyectos de la clase. Puede que tengas un proyecto en mente o todavía no, sin embargo el día de hoy nos dedicaremos a preparar un proyecto. 
+### 1. Objetivos :dart: 
+- Identificar los conceptos básicos de Machine Learning (como estructura, funcionamiento, algoritmos en Python 3)
 
-Cabe destacar que Machine Learning **no es una disciplina única**: A diferencia de un curso de programación estándar donde puedes desarrollar un proyecto desde cero y en cada sesión lo mejoras, en este curso cada uno de los temas de las sesiones irá encaminado a enseñarte una herramienta diferente. 
+### 2. Contenido :blue_book:
 
-Puede que para tu proyecto necesites una -o varias- de las herramientas que te mostramos. Sin embargo, debes de conocerlas todas y aprender en donde una herramienta funciona mejor que otra. 
+---
+##### <ins>¿Qué es Machine Learning?</ins>
+<img src="https://www.analyticsinsight.net/wp-content/uploads/2020/03/AI_Animated.gif" align="right" height="200" width="300">
 
-¡Bienvenido nuevamente, y comencemos!
+El aprendizaje automático, o *Machine Learning* en inglés, es una tecnología que permite a las computadoras aprender y tomar decisiones sin necesidad de ser programadas explícitamente. En lugar de escribir un conjunto de reglas específicas para realizar una tarea, como reconocer imágenes o predecir el tiempo, se alimenta a la computadora con datos y algoritmos que le permiten aprender automáticamente patrones y hacer predicciones basadas en esos datos.
 
-## Exactamente... ¿Qué es eso de Machine Learning? 
+Es una manera de enseñar a una computadora a reconocer patrones y tomar decisiones por sí misma a través de la experiencia y los datos, en lugar de darle instrucciones paso a paso. Esto lo hace especialmente útil en una amplia gama de aplicaciones, desde el reconocimiento facial hasta la recomendación de películas en plataformas de streaming.
 
-Hay muchas definiciones para ese elusivo concepto, desde las mas románticas como *"Darle a un pedazo de silicio la capacidad de pensar"* hasta otras mas puntuales como *"Crear programas que aprenden y se adaptan al entorno"*
+- [**`EJEMPLO 1`**](Ejemplo-01/Readme.md)
+- [**`RETO 1`**](Reto-01/Readme.md)
+- [**`RETO 2`**](Reto-02/Readme.md)
 
-![Yep, las máquinas también pueden aprender](imgassets/Imagen1.gif)
-
-En general, nosotros usaremos la definición de que un algoritmo de Machine Learning es *un sistema complejo que aprende y mejora su respuesta con los datos que recibe de entrada*
-
-Para muestra de ello, veamos un poco acerca de la programación tradicional vs Machine Learning.
-
-### Programación Tradicional.
-
-Por lo general, nosotros los programadores creamos sistemas que tienen la siguiente estructura: 
-
-![Programación tradicional](imgassets/TraditionalProgramming.png)
-
-Los programadores sabemos las entradas que queremos, sabemos las salidas que queremos, y generamos un programa que tome las entradas y construya las salidas. En este ejemplo, un sistema de control de un horno para cocinar y formar pan 
-
-> *(Si, sé que el proceso de fabricar pan no es estrictamente así, pero supongamos que trabajamos en una empresa de pan a gran escala)*
-
-Sin embargo existen algunos casos en donde:
-- Las entradas parecen no tener relación con la salida.
-- La lógica de mappeo entrada / salida es muy compleja.
-- Hay demasiados casos posibles
-- etc...
-
-![Whoopsie! Buena suerte programando eso!](imgassets/TraditionalProgrammingLimits.png)
-_Whoopsie! Buena suerte programando eso!_
-
-Y bueno, ¿cómo rompemos esos límites? Necesitamos generar un algoritmo que tenga de entrada: 
-- Entradas del sistema
-- Salidas esperadas
-
-Y nos dé como respuesta: **Una función matemática que haga el vínculo entre las entradas y las salidas esperadas**
-
-![Programación tradicional VS Machine Learning!](imgassets/TraditionVsML.png)
-*Programación Tradicional Vs Machine Learning*
-
-### Reto 01:
->En equipos, piensen y definan un problema que hayan intentado programar y no lo hayan logrado exitosamente. 
-¿Qué fue lo que falló?. 
-Si hubieras tenido un sistema que aprendiera solo, ¿Habrían podido solucionarlo? ¿Cómo lo hubieran solucionado?
-Discutamos sus hallazgos. 
-
-## ¿Cómo es que una computadora puede aprender?
-
-Para poder responder esta pregunta, primero comencemos con un reto muy simple.
-
-### Reto 02:
-> Definamos: ¿Qué es aprender? ¿Cómo puedes definir qué aprendes? ![Hmm...](imgassets/Thinking.jpg)
-
- *(Spoilers en las siguientes líneas!)*
-
-
+---
+##### <ins>¿Cómo aprende una computadora?</ins>
 Aprender consiste en *Reconocer los errores y corregirlos para tratar de no cometerlos de nuevo.* Tanto en Machine Learning como en la vida diaria, si no eres capaz de reconocer un error, no eres capaz de corregirlo, por tanto no aprenderás.
 
 El principal indicador de que estás aprendiendo (o de que tu sistema está aprendiendo) es que **conforme el tiempo pasa, la probabilidad de cometer un error disminuye drásticamente.**
 
-![La práctica hace al maestro!](imgassets/PracticeMakesPerfect.jpg)
+<img src="imgassets/PracticeMakesPerfect.jpg" align="right" height="200" width="300">
 
 Existen varias maneras de aprender, pero hablar de todas ellas sería desviar nuestra conversación hacia la rama de la psicología del aprendizaje. La que nos interesa por ahora va más encaminada hacia los procesos condicionantes de Pavlov: 
 
 - Un refuerzo positivo: Cada vez que el sistema hace lo que yo espero, le doy una recompensa.
 - Un refuerzo negativo: Cada vez que el sistema hace algo que no esperaba, le doy un castigo.
 
-![El perrito de pavlov](imgassets/Pavlov.gif)
-
 Para entender cómo funciona este condicionamiento de Pavlov en sistemas, necesitaremos ver un poco acerca de cómo funcionan las derivadas.
 
-## Derivadas (eww...)
-
-Sí sí, lo sé, a nadie le entusiasma trabajar con derivadas, sobre todo si las llegaste a ver en la Preparatoria, y (como yo) ya ha pasado un tiempo largo de eso, así que trataré de mantener las ecuaciones matemáticas al mínimo (creeme, a mi tampoco me apasiona el explicar matemáticas complicadas...)
+<img src="imgassets/Pavlov.gif" align="right" height="200" width="300">
 
 Una derivada tiene un montón de definiciones, eso lo sabemos bien desde la preparatoria, pero de entre todas las definiciones, la que mas nos interesa es la que reza: *"Una derivada es una razón de cambio"*
 
 O en un lenguaje mas coloquial: *"Una derivada nos dice que tantos cambios hay entre dos puntos. Nos dice también si la función crece o decrece en un intervalo dado."* 
 
-Por ejemplo, observa la siguiente imagen:
-![Derivadas](imgassets/Derivative.gif)
-
-Lo que nos interesa mas que nada de esa imagen es ese triangulo. Entre mas grande es ese triángulo, mas distancia hay entre dos puntos (el punto que toca la curva, y el donde acaba el triangulo). Si notas, el triángulo se vuelve un solo punto cuando se encuentra en el lugar mas bajo. Eso quiere decir que la derivada es 0.
-
-Si si, muy bonito, y bueno, ¿eso qué tiene que ver con Machine Learning? 
-
 Usamos derivadas como la medida de qué tantos errores comete un sistema. A mayor derivada, mas errores comete, y el objetivo de nuestros sistemas de Machine Learning es **reducir esa derivada a lo mínimo posible**
 
 Veamos algunos ejemplos interesantes de cómo las derivadas hacen cosas con Machine Learning. 
 
-### Ejemplo 01: Alien Isolation.
+- [**`EJEMPLO 2`**](Ejemplo-01/Readme.md)
 
-![On ta bebeeeee](imgassets/AlienIsolation.jpg)
-
-El juego de *Alien: Isolation* trata de escapar del clásico Alien de las películas. La inteligencia artificial del clásico monstruo espacial funciona con dos cerebros: Uno de los cerebros tiene el control del cuerpo del Alien, y otro cerebro tiene conocimiento de donde te encuentras en todo momento. Sin embargo, el cerebro que controla el movimiento no tiene idea de donde estás. 
-
-¿Cómo le hace entonces el Alien para acecharte? Simple: El cerebro que sabe donde estás, le manda señales al cerebro que se mueve, en una especie de juego de *frio... frio... tibio... caliente... caliente...*
-
-Cada vez que el cerebro del Alien recibe esas señales, lo que intenta compulsivamente es reducir la distancia entre tu y él, y ese indicador de frio-caliente es justamente *una derivada*.
-
-![gradient1](imgassets/gradientdescent1.gif)
-
-Las matemáticas entonces no sirven <s>solamente</s> para torturar alumnos, sino que son una herramienta para traducir fenómenos del mundo real e insertarlos en las computadoras. Una derivada funciona entonces como esa función de frío - caliente, y los proyectos que fabricarás deberán intentar ajustarse para acercarse a un error cercano a 0. 
-
-## Método de aprendizaje 1: Descenso en Gradiente.
-
-La idea del descenso en gradiente es tratar de hallar el mínimo error posible. Cuando un punto ha llegado hasta abajo en una gráfica de una superficie, llega al mínimo error. Por ejemplo, observa esta gráfica: 
-
-![gradient2](imgassets/gradientdescent2.gif)
-
-En este caso la esfera desciende hasta llegar al mínimo error. Esto quiere decir que el sistema ha aprendido eficazmente. Sin embargo, debes de saber que hay veces en las que ese error no siempre se reduce y se queda estancado, a eso se le llama un *"mínimo local"*. Tristemente eso no nos sirve de nada en una I.A. Ya que un mínimo local suele fallar muchisimo.
-
-![Minimo local](imgassets/localminima.gif)
+---
 
 ## Aplicaciones de Machine Learning en la Industria
 
