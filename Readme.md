@@ -4,7 +4,7 @@
 
 ## Descripción
 - Identificar, seleccionar, construir e implementar modelos de Machine Learning con **Python**
-- Identificar si un problema amerita utilizar Machine Learning, seleccionar el mejor algoritmo, construirlo, implementarlo y probar su eficacia.  
+- Identificar si un problema amerita utilizar Machine Learning, seleccionar el mejor modelo, construirlo, implementarlo y probar su eficacia.  
 
 ## Contenido
 
