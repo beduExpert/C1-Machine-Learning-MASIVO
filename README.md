@@ -9,7 +9,7 @@
 ## Contenido
 
  - [Sesión 1: Introducción a Machine Learning ](Sesion01/README.md)
- - [Sesión 2: Separación, validación y evaluación para algoritmos de ML ](./Sesion-02)
+ - [Sesión 2: Separación, validación y evaluación para algoritmos de ML ](Sesion02/README.md)
  - [Sesión 3: Algoritmos no supervisados ](./Sesion-03)
  - [Sesión 4: Problemas de regresión ](./Sesion-04)
  - [Sesión 5: Árboles de decisión ](./Sesion-05)
