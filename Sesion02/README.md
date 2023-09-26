@@ -56,8 +56,8 @@ Leave-One-Out Cross-Validation (LOOCV) es una técnica de validación cruzada en
 
 Una matriz de confusión en Machine Learning es una tabla que muestra el desempeño de un modelo al comparar las predicciones con las etiquetas reales. Muestra cuántos casos se clasificaron correctamente (verdaderos positivos y verdaderos negativos) y cuántos se clasificaron incorrectamente (falsos positivos y falsos negativos), lo que ayuda a evaluar la precisión y el rendimiento del modelo en problemas de clasificación.
 
-- [**`EJEMPLO 3`**](Ejemplo04.ipynb)
-- [**`RETO 3`**](Reto04.ipynb)
+- [**`EJEMPLO 4`**](Ejemplo04.ipynb)
+- [**`RETO 4`**](Reto04.ipynb)
 
 ---
 
@@ -82,11 +82,11 @@ Las métricas de desempeño en Machine Learning son medidas que evalúan cuán b
 
 Estas métricas ayudan a cuantificar el rendimiento del modelo y a tomar decisiones sobre su uso o mejora.
 
-- [**`EJEMPLO 5`**](Ejemplo04/README.md)
-- [**`RETO 5`**](Reto04/README.md)
+- [**`EJEMPLO 5`**](Ejemplo05.ipynb)
+- [**`RETO 5`**](Reto05.ipynb)
 
 --- 
 
 <br/>
 
-[`Anterior`](../README.md) | [`Siguiente`](../Sesion02/README.md)      
+[`Anterior`](../Sesion01/README.md) | [`Siguiente`](../Sesion03/README.md)      
