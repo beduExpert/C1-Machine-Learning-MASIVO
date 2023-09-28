@@ -51,7 +51,7 @@ En resumen, los algoritmos no supervisados son herramientas valiosas en el anál
 ---
 
 #### <ins>K-Means</ins>
-<img src="https://www.maartengrootendorst.com/assets/images/posts/2019-07-30-customer/kmeans.gif" align="right" height="250" width="350">
+<img src="img01.png" align="right" height="250" width="350">
 
 
 K-Means es un algoritmo de clustering utilizado en Machine Learning y análisis de datos. Su funcionamiento se resume de la siguiente manera:
