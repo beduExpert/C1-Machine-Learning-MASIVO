@@ -74,4 +74,4 @@ Los descriptores son esenciales porque ayudan a transformar datos complejos o no
 
 <br/>
 
-[`Anterior`](../README.md) | [`Siguiente`](../Sesion02/README.md)      
+[`Anterior`](../README.md) | [`Siguiente`](../Sesion-02/README.md)      

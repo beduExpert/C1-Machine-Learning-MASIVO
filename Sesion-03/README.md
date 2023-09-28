@@ -144,4 +144,4 @@ Un sistema de recomendación basado en K-Means puede ser efectivo para agrupar u
 
 <br/>
 
-[`Anterior`](../Sesion02/README.md) | [`Siguiente`](../Sesion04/README.md)      
+[`Anterior`](../Sesion-02/README.md) | [`Siguiente`](../Sesion-04/README.md)      

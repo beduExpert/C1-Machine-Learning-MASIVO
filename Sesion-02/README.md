@@ -89,4 +89,4 @@ Estas métricas ayudan a cuantificar el rendimiento del modelo y a tomar decisio
 
 <br/>
 
-[`Anterior`](../Sesion01/README.md) | [`Siguiente`](../Sesion03/README.md)      
+[`Anterior`](../Sesion-01/README.md) | [`Siguiente`](../Sesion-03/README.md)      
