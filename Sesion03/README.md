@@ -112,8 +112,8 @@ El método del codo es una técnica utilizada para determinar el número óptimo
 
 El método del codo te ayuda a seleccionar un valor de K que equilibra la cohesión dentro de los clusters con la separación entre los clusters. Sin embargo, ten en cuenta que en algunos casos, el gráfico del WCSS puede no tener un codo claro, y la elección de K puede requerir un juicio adicional.
 
-- [**`EJEMPLO 3`**](Ejemplo03/README.md)
-- [**`RETO 3`**](Reto03/README.md)
+- [**`EJEMPLO 3`**](Ejemplo03.ipynb)
+- [**`RETO 3`**](Reto03.ipynb)
 
 --- 
 
