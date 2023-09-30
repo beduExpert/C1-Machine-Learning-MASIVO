@@ -27,7 +27,7 @@ Esta separación ayuda a garantizar que el modelo funcione bien con datos nuevos
 
 ---
 #### <ins>Validación cruzada</ins>
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/K-fold_cross_validation.jpg" align="right" height="250" width="350">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/K-fold_cross_validation.jpg" align="right" height="200" width="350">
 
 
 La validación cruzada en Machine Learning es una técnica para evaluar el rendimiento de un modelo de manera más robusta. Consiste en dividir los datos en conjuntos de entrenamiento y prueba múltiples veces, permitiendo una evaluación más precisa de cómo el modelo generaliza a datos no vistos. Esto ayuda a evitar el sobreajuste y proporciona una medida más fiable del rendimiento del modelo.
@@ -38,7 +38,7 @@ La validación cruzada en Machine Learning es una técnica para evaluar el rendi
 ---
 
 #### <ins>Leave-One-Out Cross Validation</ins>
-<img src="https://miro.medium.com/v2/resize:fit:1400/0*v4goNAC_Ojb511a4.gif" align="right" height="250" width="350">
+<img src="https://miro.medium.com/v2/resize:fit:1400/0*v4goNAC_Ojb511a4.gif" align="right" height="200" width="350">
 
 
 
@@ -51,7 +51,7 @@ Leave-One-Out Cross-Validation (LOOCV) es una técnica de validación cruzada en
 ---
 
 #### <ins>Matriz de confusión: Qué tan listo es tu algoritmo</ins>
-<img src="https://miro.medium.com/v2/resize:fit:922/1*wEDbFRBl-je_ARYYai2_mg.gif" align="right" height="250" width="350">
+<img src="https://miro.medium.com/v2/resize:fit:922/1*wEDbFRBl-je_ARYYai2_mg.gif" align="right" height="200" width="350">
 
 
 Una matriz de confusión en Machine Learning es una tabla que muestra el desempeño de un modelo al comparar las predicciones con las etiquetas reales. Muestra cuántos casos se clasificaron correctamente (verdaderos positivos y verdaderos negativos) y cuántos se clasificaron incorrectamente (falsos positivos y falsos negativos), lo que ayuda a evaluar la precisión y el rendimiento del modelo en problemas de clasificación.
