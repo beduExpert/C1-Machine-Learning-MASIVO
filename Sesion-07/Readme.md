@@ -62,7 +62,7 @@ Puedes ver un ejemplo de cómo se implementa [Naïve Bayes aqui.](Ejemplo02/Ejem
 - En problemas muy complejos o robustos puede que un clasificador de Naïve Bayes se quede muy corto  es mejor utilizar otras herramientas si Naïve Bayes no te da buenos resultados. 
 
 ## Reto 01.
-> Entrena un modelo Naive Bayes para resolver un problema de clasificación. Evalúalo y guarda tus evaluaciones en un Google Spreadsheet.
+> Entrena un modelo Naive Bayes para resolver un problema de clasificación. Evalúalo y calcula la precisión del modelo.
 
 ## Clasificador 2: árboles de decisión y random forests.
 
@@ -86,7 +86,7 @@ Ya hemos visto cómo funcionan los random forests en sesiones pasadas, por lo qu
 - Si los datos de entrada y de salida no tienen una correlación evidente, puede que no clasifique tan bien como esperas. Sin embargo, te exhorto a probar.
 
 ## Reto 02.
-> Entrena un modelo Random Forests para resolver un problema de clasificación. Evalúalo y guarda tus evaluaciones en un Google Spreadsheet.
+> Entrena un modelo Random Forests para resolver un problema de clasificación. Evalúalo y calcula la precisión del modelo.
 
 ## Clasificador 3: Support Vector Machine (SVM).
 
@@ -115,7 +115,7 @@ El entrenamiento de una máquina de soporte vectorial no es fácil tampoco; en a
 - Si requieres implementar tu solución en un sistema limitado como un microcontrolador o un ambiente embebido, las SVM puede que sean un dolor de cabeza más que una ayuda, ya que -regresando a las desventajas- programar uno desde cero es un problema muy pesado que podrías ahorrarte usando otro clasificador. 
 
 ## Reto 03.
-> Entrena un modelo SVM para resolver un problema de clasificación. Evalúalo y guarda tus evaluaciones en un Google Spreadsheet.
+> Entrena un modelo SVM para resolver un problema de clasificación. Evalúalo y calcula la precisión del modelo.
 
 
 ## Clasificador 4: Redes Neuronales Artificiales.
@@ -142,4 +142,10 @@ Igualmente, hemos visto cómo funcionan las redes neuronales artificiales. La me
 - Si puedes utilizar un clasificador mucho más sencillo, es recomendable que intentes primero con otro. Las redes neuronales son una herramienta de doble filo ya que el proceso de entrenamiento puede ser demasiado lento, sobre todo si otro clasificador mas rápido te da resultados satisfactorios. 
 
 ## Reto 04.
-> Entrena un modelo de red neuronal para resolver un problema de clasificación. Evalúalo y guarda tus evaluaciones en un Google Spreadsheet.
+> Entrena un modelo de red neuronal para resolver un problema de clasificación. Evalúalo y calcula la precisión del modelo.
+
+## LazyPredict
+
+LazyPredict es una biblioteca de Python que automatiza la selección y evaluación de modelos de aprendizaje automático en un conjunto de datos dado. Te proporcionaré un ejemplo básico de cómo usar LazyPredict para realizar una rápida evaluación de varios modelos de aprendizaje automático en Python.
+
+[Ejemplo3](Ejemplo3.ipynb)
