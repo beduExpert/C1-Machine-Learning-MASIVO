@@ -61,7 +61,7 @@ Aquí tienes una breve explicación de algunas de las funciones de activación m
 - Estas son solo algunas de las funciones de activación comunes, y la elección de la función de activación adecuada depende del problema que se esté abordando y la arquitectura de la red neuronal. Cada función de activación tiene sus propias ventajas y desventajas, y a menudo se experimenta con varias de ellas para obtener el mejor rendimiento en una tarea específica.
 
 - [**`EJEMPLO 2`**](Ejemplo02.ipynb)
-- [**`RETO 2`**](Reto01.ipynb)
+- [**`RETO 2`**](Reto02.ipynb)
 
 ---
 #### <ins>Conectando neuronas con Numpy</ins>
