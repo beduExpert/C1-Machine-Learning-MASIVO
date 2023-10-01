@@ -13,7 +13,7 @@
  - [Sesión 3: Algoritmos no supervisados](Sesion-03/README.md)
  - [Sesión 4: Problemas de regresión](Sesion-04/README.md)
  - [Sesión 5: Árboles de decisión](Sesion-05/README.md)
- - [Sesión 6: Clasificación y Redes Neuronales Artificiales ](./Sesion-06)
+ - [Sesión 6: Redes neuronales artificiales ](Sesion-06/README.md)
  - [Sesión 7: Arena de Clasificadores ](./Sesion-07)
  - [Sesión 8: Fundamentos de procesamiento de imágenes ](./Sesion-08)
 
