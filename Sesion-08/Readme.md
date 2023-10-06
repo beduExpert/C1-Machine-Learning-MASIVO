@@ -152,10 +152,3 @@ También debes de saber que los histogramas no son perfectos descriptores. Suele
 
 ## Reto 03: 
 > Con tres imágenes parecidas, en fondo blanco y del mismo tamaño, genera histogramas. Luego repite el proceso con otro objeto distinto, pero las mismas características (fondo blanco, mismo tamaño de imagen). Coteja los histogramas visualmente para ver que realmente los objetos parecidos tienen histogramas parecidos. 
-
-## Clasificación de imágenes con redes neuronales
-
-Ahora vamos a ver una aplicación práctica de todo esto que hemos aprendido hasta ahora. Crearemos una red neuoronal para clasificar el dataset [Fashion Mnist](https://www.tensorflow.org/datasets/catalog/fashion_mnist#:~:text=Fashion%2DMNIST%20is%20a%20dataset,on%20Papers%20With%20Code%20north_east).
-
-## Reto 04:
-> ¡Evalúa el desempeño de nuestra red neuronal!
