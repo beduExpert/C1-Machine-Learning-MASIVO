@@ -1,4 +1,4 @@
-[`Machine Learning`](../Readme.md) > `Sesión 01`
+[`Machine Learning`](../README.md) > `Sesión 01`
 
 ## Sesión 01: Introducción a Machine Learning
 
