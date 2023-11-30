@@ -102,7 +102,6 @@ Otra biblioteca más usada para configurar redes neuronales es Tensorflow.
 Veamos ejemplos de ambas. 
 
 - [**`EJEMPLO 5`**](Ejemplo05.ipynb)
-- [**`RETO 3`**](Reto03.ipynb)
 
 ---
 
